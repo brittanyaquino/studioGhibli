@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" href="https://use.typekit.net/fmo8kgy.css">
+    <title>Studio Ghibli Film Gallery</title>
+</head>
+<body>
+    <main>
+        <header>
+            <h1>Studio Ghibli </h1>
+            <div class="line"></div>
+            <h3>Directed by Hayao Miyazaki</h3>
+        </header>
+
+        <section>
+            <img id="large-img" src="media/howl.jpg" alt="Howl's Moving Castle film poster.">  
+        </section>
+
+        <aside> 
+            <!-- Small Images Here -->
+            <div class="thumbnail">
+                <img id="howls" src="media/howl.jpg" alt="Howl's Moving Castle film poster."> 
+            </div>
+
+            <div class="thumbnail">
+                <img id="away" src="media/away.jpg" alt="Spirited Away film poster."> 
+            </div>
+
+            <div class="thumbnail">
+                <img id="nausicaa" src="media/nausicaa.jpg" alt="Nausicaä of the Valley of the Wind film poster."> 
+            </div>
+
+            <div class="thumbnail">
+                <img id="mononoke" src="media/mononoke.jpg" alt="Princess Mononoke film poster."> 
+            </div>
+
+            <div class="thumbnail">
+                <img id="totoro" src="media/totoro.jpg" alt="My Neighbor Totoro film poster."> 
+            </div>
+
+            <div class="thumbnail">
+                <img id="kiki" src="media/kiki.jpg" alt="Kiki's Delivery Service film poster."> 
+            </div>
+
+        </aside>
+    </main>
+
+    <script>
+
+        function imageChange(srcNew, altNew) {
+            document.querySelector('#large-img').src = srcNew;
+            document.querySelector('#large-img').alt = altNew;
+        }
+
+        var thumbnailImg = document.querySelectorAll('.thumbnail img');
+
+        for (var i = 0; i < thumbnailImg.length; i++){
+            thumbnailImg[i].onclick = function() {
+                imageChange(this.src, this.alt);
+            }
+        }
+        
+    </script>
+    
+    
+</body>
+</html>
